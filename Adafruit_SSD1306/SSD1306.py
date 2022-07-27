@@ -82,7 +82,8 @@ class SSD1306Base(object):
         # Default to platform GPIO if not provided.
         self._gpio = gpio
         if self._gpio is None:
-            self._gpio = GPIO.get_platform_gpio()
+            #self._gpio = GPIO.get_platform_gpio()
+            self._gpio = gpio
         # Setup reset pin.
         self._rst = rst
         if not self._rst is None:
